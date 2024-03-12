@@ -2,10 +2,15 @@ package Tiles;
 
 import Util.Tile;
 
-public class Occupied extends Tile {
+public class Blocked extends Tile {
 
-    public Occupied(){
+    public Blocked(){
         set_color(0,0,0);
+    }
+
+    @Override
+    public String toString(){
+        return "B";
     }
 
 }

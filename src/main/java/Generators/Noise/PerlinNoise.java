@@ -1,4 +1,4 @@
-package WorldParts.Noise;
+package Generators.Noise;
 
 import java.util.Random;
 
@@ -27,7 +27,7 @@ public class PerlinNoise {
 
      */
 
-    static float[][] generatePerlinNoise(int width, int height, int octaveCount, float persistence, long seed) {
+    public static float[][] generatePerlinNoise(int width, int height, int octaveCount, float persistence, long seed) {
 
         final float[][] base = new float[width][height];
 
