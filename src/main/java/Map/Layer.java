@@ -31,7 +31,7 @@ public class Layer {
         int[] neighbours = new int[4];
         neighbours[0] = x+1 < size_x ? layer[x+1][y].get_type() : -1;
         neighbours[1] = x-1 > 0 ? layer[x-1][y].get_type() : -1;
-        neighbours[2] = y+1 < size_x ? layer[x][y+1].get_type() : -1;
+        neighbours[2] = y+1 < size_y ? layer[x][y+1].get_type() : -1;
         neighbours[3] = y-1 > 0 ? layer[x][y-1].get_type() : -1;
         return neighbours;
     }

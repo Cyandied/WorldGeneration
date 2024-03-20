@@ -49,8 +49,18 @@ public class World {
         current_layer = world_map[current_depth];
     }
 
+    public int get_current_depth(){
+        return current_depth;
+    }
+
     public Layer get_current_layer(){
         return current_layer;
+    }
+    public Layer get_layer(int layer){
+        if(layer >= 0 && layer < size_z){
+            return world_map[layer];
+        }
+        return null;
     }
 
     public Layer get_above(){
@@ -59,24 +69,14 @@ public class World {
         }
         return null;
     }
-    public Layer get_above(int x){
-        if(current_depth+x < size_z){
-            return world_map[current_depth+x];
-        }
-        return null;
+    public int get_size_x(){
+        return size_x;
     }
-
-    public Layer get_below(){
-        if(current_depth-1 >= 0){
-            return world_map[current_depth-1];
-        }
-        return null;
+    public int get_size_y(){
+        return size_y;
     }
-    public Layer get_below(int x){
-        if(current_depth-x >= 0){
-            return world_map[current_depth-x];
-        }
-        return null;
+    public int get_size_z(){
+        return size_z;
     }
 
     public void go_up(){

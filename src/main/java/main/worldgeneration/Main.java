@@ -14,9 +14,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primary_stage) throws IOException {
         primary_stage.setTitle("WorldGeneration");
-        int size = 75;
-        World world = new World(size,size,30);
-        LayerDisplay layers = new LayerDisplay(world,size,size);
+        int width = 250;
+        int height = 100;
+        World world = new World(width,height,30);
+        LayerDisplay layers = new LayerDisplay(world,width,height);
         layers.draw_layered_display();
         StackPane display = layers.get_stack();
         Scene scene = new Scene(display,display.getWidth(),display.getHeight());

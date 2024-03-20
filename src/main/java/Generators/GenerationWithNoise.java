@@ -42,7 +42,7 @@ public class GenerationWithNoise {
         if(z > (int) (height * this.z)){
             return new Air();
         }
-        else if(z < (int) (height * (float) this.z) && z < (int) (0.3 * (float) this.z)){
+        else if(z < 5){
             return new Stone();
         }
         return get_biome(height,moisture,heat).get_tile();
