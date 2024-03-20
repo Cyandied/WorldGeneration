@@ -10,7 +10,7 @@ public class TileMaster {
     }
     public enum Tile_types {
         //Tile types
-            AIR,STONE,DIRT,WATER,SAND,GRASS
+            AIR,STONE,DIRT,WATER,SAND,GRASS,OCEAN_GRAVEL,ALGE
     }
 
 }

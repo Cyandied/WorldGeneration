@@ -1,6 +1,7 @@
 package UIelems;
 
 import Map.World;
+import Map.WorldOld;
 
 public class LayerPanes implements MapElements {
 

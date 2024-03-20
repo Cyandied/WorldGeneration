@@ -28,18 +28,39 @@ public abstract class Tile {
         Random rand = new Random();
         if(tolerate_r_variance > 0){
             this.r = (int) (r * rand.nextDouble(1-tolerate_r_variance,1+tolerate_r_variance));
-        } else {
+        }
+        else {
             this.r = r;
+        }
+        if(this.r > 255){
+            this.r = 255;
+        }
+        else if (this.r < 0){
+            this.r = 0;
         }
         if(tolerate_g_variance > 0){
             this.g = (int) (g * rand.nextDouble(1-tolerate_g_variance,1+tolerate_g_variance));
-        } else {
+        }
+        else {
             this.g = g;
+        }
+        if(this.g > 255){
+            this.g = 255;
+        }
+        else if (this.g < 0){
+            this.g = 0;
         }
         if(tolerate_b_variance > 0){
             this.b = (int) (b * rand.nextDouble(1-tolerate_b_variance,1+tolerate_b_variance));
-        } else {
+        }
+        else {
             this.b = b;
+        }
+        if(this.b > 255){
+            this.b = 255;
+        }
+        else if (this.b < 0){
+            this.b = 0;
         }
     }
 

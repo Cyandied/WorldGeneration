@@ -12,10 +12,17 @@ public abstract class Biome {
     public float max_moisture = 1;
     public float max_heat = 1;
 
-    public Biome(float min_height, float min_moisture,float min_heat){
+    public int type;
+
+    public Biome(float min_height, float min_moisture,float min_heat, int type){
         this.min_height = min_height;
         this.min_moisture = min_moisture;
         this.min_heat = min_heat;
+        this.type = type;
+    }
+
+    public int get_type(){
+        return type;
     }
 
     public void set_max(float max_height,float max_moisture,float max_heat){
@@ -25,6 +32,10 @@ public abstract class Biome {
     }
 
     public abstract Tile get_tile();
+
+    public Tile get_special(){
+        return null;
+    }
 
     boolean match_min_condition(float height, float moisture, float heat){
         return height >= min_height && moisture >= min_moisture && heat >= min_heat;

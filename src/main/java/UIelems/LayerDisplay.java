@@ -18,7 +18,7 @@ public class LayerDisplay{
     StackPane display_stack;
     LayerPanes layer_panes;
 
-    public LayerDisplay(World world,int x, int y){
+    public LayerDisplay(World world, int x, int y){
         this.world = world;
         this.x = x;
         this.y = y;

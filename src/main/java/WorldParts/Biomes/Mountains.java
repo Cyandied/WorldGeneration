@@ -6,7 +6,7 @@ import Util.Tile;
 
 public class Mountains extends Biome {
     public Mountains() {
-        super(0.5F,0,0);
+        super(0.5F,0,0,2);
     }
 
     @Override
