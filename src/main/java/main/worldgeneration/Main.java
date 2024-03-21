@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage primary_stage) throws IOException {
         primary_stage.setTitle("WorldGeneration");
         width = 250;
-        height = 100;
+        height = 150;
         primary_stage.setScene(make_scene(primary_stage));
         primary_stage.show();
     }
